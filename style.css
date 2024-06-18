@@ -108,8 +108,6 @@ textarea {
 }
 @media (max-width: 375px) {
   .col {
-    padding-left: 4px;
-    padding-right: 4px;
     margin-bottom: 8px;
   }
 }
