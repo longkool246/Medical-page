@@ -80,6 +80,7 @@ li {
 
 input {
   border: none;
+  outline: none;
 }
 
 textarea {
@@ -135,6 +136,8 @@ textarea {
 }
 header {
   background-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  position: sticky;
 }
 
 .header-wrap {
@@ -142,6 +145,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  position: sticky;
 }
 
 .header-logo {
@@ -185,6 +189,12 @@ header {
 @media (max-width: 1200px) {
   .header-search input {
     width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .header-search input {
+    width: 180px;
+    height: 28px;
   }
 }
 
@@ -761,4 +771,36 @@ label {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 300;
+}
+
+select {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+select:hover {
+  background-color: #f44336;
+}
+@media (max-width: 600px) {
+  select {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+option {
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

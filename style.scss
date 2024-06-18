@@ -83,6 +83,7 @@ li {
 
 input {
   border: none;
+  outline: none;
 }
 
 textarea {
@@ -140,6 +141,8 @@ textarea {
 //header
 header {
   background-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  position: sticky;
 }
 
 .header-wrap {
@@ -147,6 +150,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  position: sticky;
 }
 
 .header-logo {
@@ -187,6 +191,10 @@ header {
     display: inline-flex;
     @media (max-width: 1200px) {
       width: 200px;
+    }
+    @media (max-width: 600px) {
+      width: 180px;
+      height: 28px;
     }
   }
 }
@@ -782,4 +790,32 @@ label {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 300;
+}
+
+//language
+
+select {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background-color: #f44336;
+  }
+  @media (max-width: 600px) {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+option {
+  padding: 10px;
 }

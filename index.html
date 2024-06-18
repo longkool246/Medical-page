@@ -62,17 +62,11 @@
             </p>
           </div>
         </div>
-        <div class="language">
-          <div class="language__icon">
-            <img src="image/vn.png" alt="">
-          </div>
-          <div class="language__choose">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-              <path
-                d="M13.6143 2.15354L7.86425 7.65335C7.62256 7.88479 7.31103 8.00001 7 8.00001C6.68897 8.00001 6.37744 7.88479 6.13575 7.65335L0.385687 2.15354C-0.112844 1.67604 -0.130438 0.885039 0.346625 0.386039C0.824156 -0.11393 1.61519 -0.129555 2.11422 0.346976L7 5.02063L11.8858 0.346976C12.3848 -0.130555 13.1758 -0.112961 13.6534 0.386039C14.1304 0.885039 14.1128 1.67604 13.6143 2.15354Z"
-                fill="#eaecf0" />
-            </svg>
-          </div>
+        <div class="language-selector">
+          <select id="language">
+            <option value="en">English</option>
+            <option value="ja">Japanese</option>
+          </select>
         </div>
       </div>
     </div>
@@ -159,7 +153,9 @@
         <img src="image/Arrow.png" class="arrow"><label for="A">Infomation</label>
 
         <ul>
-          <li><a href="#">News</a></li>
+          <li>
+            <a data-en="News" data-ja="こんにちは、お元気ですか？" href="#">News</a>
+          </li>
           <li><a href="#">Location</a></li>
           <li><a href="#">Greeting</a></li>
           <li><a href="#">Doctor career</a></li>
@@ -228,9 +224,6 @@
       <div class="mySlides fade">
         <img src="image/mau3.jpg" style="width: 100%">
       </div>
-
-      <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a> -->
       <div class="slideshow__content">
         <div class="container">
           <div class="slideshow__content-item dflex pt-30" style="gap: 10px;">
@@ -239,10 +232,13 @@
               Ikebukuro Sunshine Street Eye Clinic
             </h1>
           </div>
-          <p class="slideshow__content-item">We provide comprehensive eye care services with a personal, professional, and customized approach.
+          <p class="slideshow__content-item">We provide comprehensive eye care services with a personal, professional,
+            and customized approach.
             We have English-speaking staff to help you.
-            Our director is a cornea specialist who has worked for <span>Schepens Eye Research Institute of Harvard University</span>
-            We performe cataract surgery at <span>Shinjuku Higashiguchi Eye Clinic</span>, and you can see the surgeon also at this clinic
+            Our director is a cornea specialist who has worked for <span>Schepens Eye Research Institute of Harvard
+              University</span>
+            We performe cataract surgery at <span>Shinjuku Higashiguchi Eye Clinic</span>, and you can see the surgeon
+            also at this clinic
             and consult him about cataract on <span>All Saturday and Sunday</span>(3 times a month).
             We also have retina, glaucoma, dry eye, macular, and cataract specialists.
             Additionally, we can surgically remove chalazion (stye) and conjunctival concretions.</p>
@@ -266,21 +262,21 @@
           <div class="slideshow__content-item">TEL・FAX</div>
           <p class="slideshow__content-item">03-3981-6363<br>
             +81-3-3981-6363</p>
-            <div class="slideshow__content-item item-brand">
-              <img src="image/facebook.png" alt="">
-              <img src="image/f2.png" alt="">
-              <img src="image/f3.jpg" alt="">
-              <img src="image/f4.jpg" alt="">
-              <img src="image/f5.jpg" alt="">
-              <img src="image/f6.jpg" alt="">
-            </div>
+          <div class="slideshow__content-item item-brand">
+            <img src="image/facebook.png" alt="">
+            <img src="image/f2.png" alt="">
+            <img src="image/f3.jpg" alt="">
+            <img src="image/f4.jpg" alt="">
+            <img src="image/f5.jpg" alt="">
+            <img src="image/f6.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
 
     <br>
 
-    <div class="dot-block" style="text-align:center">
+    <div class="dot-block" style="text-align:center; display: none">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
